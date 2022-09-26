@@ -1,0 +1,18 @@
+header{
+    text-align: center;
+}
+.counter{
+    text-align: center;
+    margin: 2em;
+}
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#blank-space{
+    width: 9em;
+}
+#boton1, #boton2{
+    flex: 1;
+}

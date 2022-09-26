@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Visitas</h1></header>
+    <div class="counter"><h2>{{ count }}</h2></div>
+    <div class="botones">
+        <form action="/suma" method="post" class="col g-3" id="boton1">
+            <div class="col-auto">
+                <label for="visitas_num" class="visually-hidden"><h3> Numero de visitas:</h3></label>
+                <input type="text" readonly class="form-control-plaintext">
+            </div>
+            <div class="col-auto">
+                <input id="blank-space" type="number" class="form-control" name="visitas_num" placeholder="int_number...">
+            </div>
+            <div>
+                <br>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Agregar</button>
+            </div>
+        </form>
+        <!--<form >
+            <button type="submit" class="btn btn-primary">Agregar Visita</button>
+        </form>-->
+        <form action="/reset" method="post" id="boton2">
+            <button type="submit" class="btn btn-warning">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
